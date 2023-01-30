@@ -1,1 +1,5 @@
-/generated_prices/
+/generated_prices/*
+
+!generated_prices/.gitignore
+
+!generated_prices/1.txt
