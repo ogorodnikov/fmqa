@@ -17,6 +17,13 @@ int main(int argc, char **argv) {
   double T = 1.00;    // One year until expiry
   std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
 
+  // Overwrite parameters with input arguments
+
+  if (argc > 1) {
+    printf("Arguments are there\n");
+    std::cout << argc << "\n";
+  }
+
   // Create the PayOff objects
   PayOff* pay_off_call = new PayOffCall(K);
 
@@ -50,6 +57,5 @@ int main(int argc, char **argv) {
     std::cout << "argc[" << i << "]:         " << argv[i] << std::endl;
   }
 
-  // return 0;
-  return discount_payoff_avg;
+  return 0;
 }
