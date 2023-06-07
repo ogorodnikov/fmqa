@@ -45,5 +45,11 @@ int main(int argc, char **argv) {
 
   std::cout << "Asian Price:     " << discount_payoff_avg << std::endl;
 
-  return 0;
+  for(int i = 1; i < argc; i++)
+  {
+    std::cout << "argc[" << i << "]:         " << argv[i] << std::endl;
+  }
+
+  // return 0;
+  return discount_payoff_avg;
 }
