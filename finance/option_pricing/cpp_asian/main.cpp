@@ -9,6 +9,7 @@ int main(int argc, char **argv) {
   // Note that you could easily modify this code to input the parameters
   // either from the command line or via a file
   unsigned num_sims = 100000;   // Number of simulated asset paths
+  // unsigned num_sims = 100;   // Number of simulated asset paths
   unsigned num_intervals = 250;  // Number of intervals for the asset path to be sampled 
   double S = 30.0;  // Option price
   double K = 29.0;  // Strike price
@@ -50,12 +51,14 @@ int main(int argc, char **argv) {
   std::cout << "Volatility:      " << v << std::endl;
   std::cout << "Maturity:        " << T << std::endl;
 
-  std::cout << "Asian Price:     " << discount_payoff_avg << std::endl;
+  // std::cout << "Asian Price:     " << discount_payoff_avg << std::endl;
+  printf("Asian Price:     %.5f\n", discount_payoff_avg);
 
   for(int i = 1; i < argc; i++)
   {
     std::cout << "argc[" << i << "]:         " << argv[i] << std::endl;
   }
+
 
   return 0;
 }
