@@ -15,31 +15,14 @@ int main(int argc, char **argv) {
   double r = 0.08;   // Risk-free rate (5%)
   double v = 0.3;    // Volatility of the underlying (20%)
   double T = 1.00;    // One year until expiry
-  std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
 
   // Overwrite parameters with input arguments
-
   if (argc > 1) {
-    printf("Arguments are there\n");
-    std::cout << argc << "\n";
-    // S = std::stod(argv[0]);
-    // S = argv[0];
-
-    // std::string data = "y=5.9568x+3.14";
-
-    // std::cout << data << "\n";
-
-    // double m = std::stod(&data[2]);
-
-    // std::cout << m << "\n";
-
-    double ddd;
-
-    ddd = atof(argv[1]);
-
-    printf("%f\n", ddd);
-
+    S = atof(argv[1]);
+    v = atof(argv[2]);
   }
+
+  std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
 
   // Create the PayOff objects
   PayOff* pay_off_call = new PayOffCall(K);
