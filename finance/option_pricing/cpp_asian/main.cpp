@@ -22,6 +22,23 @@ int main(int argc, char **argv) {
   if (argc > 1) {
     printf("Arguments are there\n");
     std::cout << argc << "\n";
+    // S = std::stod(argv[0]);
+    // S = argv[0];
+
+    // std::string data = "y=5.9568x+3.14";
+
+    // std::cout << data << "\n";
+
+    // double m = std::stod(&data[2]);
+
+    // std::cout << m << "\n";
+
+    double ddd;
+
+    ddd = atof(argv[1]);
+
+    printf("%f\n", ddd);
+
   }
 
   // Create the PayOff objects
