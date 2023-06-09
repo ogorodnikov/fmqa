@@ -23,7 +23,6 @@ int main(int argc, char **argv) {
     K = atof(argv[2]);
     r = atof(argv[3]);
     v = atof(argv[4]);
-
   }
 
   std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
