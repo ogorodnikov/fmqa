@@ -20,7 +20,10 @@ int main(int argc, char **argv) {
   // Overwrite parameters with input arguments
   if (argc > 1) {
     S = atof(argv[1]);
-    v = atof(argv[2]);
+    K = atof(argv[2]);
+    r = atof(argv[3]);
+    v = atof(argv[4]);
+
   }
 
   std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
