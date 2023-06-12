@@ -9,7 +9,6 @@ int main(int argc, char **argv) {
   // Note that you could easily modify this code to input the parameters
   // either from the command line or via a file
   unsigned num_sims = 100000;   // Number of simulated asset paths
-  // unsigned num_sims = 100;   // Number of simulated asset paths
   unsigned num_intervals = 250;  // Number of intervals for the asset path to be sampled 
   double S = 30.0;  // Option price
   double K = 29.0;  // Strike price
@@ -23,6 +22,7 @@ int main(int argc, char **argv) {
     K = atof(argv[2]);
     r = atof(argv[3]);
     v = atof(argv[4]);
+    num_sims = atof(argv[5]);
   }
 
   std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
