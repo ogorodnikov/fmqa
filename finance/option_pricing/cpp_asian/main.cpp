@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include <random>
 
 #include "payoff.h"
 #include "asian.h"
@@ -26,8 +27,19 @@ int main(int argc, char **argv) {
     num_sims = atof(argv[5]);
   }
 
-  // srand(time(0));
-  srand(time(0));
+
+  std::random_device dev;
+  std::mt19937 rng(dev());
+  std::uniform_int_distribution<std::mt19937::result_type> dist6(0, RAND_MAX - 1);
+
+  double seed = dist6(rng);
+
+  printf("seed: %.5f\n", seed);
+
+  srand(seed);
+
+  // printf("rand: %.5d\n", rand());
+
 
   std::vector<double> spot_prices(num_intervals, S);  // The vector of spot prices
 
@@ -49,21 +61,21 @@ int main(int argc, char **argv) {
   delete pay_off_call;
 
   // Finally we output the parameters and prices
-  std::cout << "Number of Paths: " << num_sims << std::endl;
-  std::cout << "Number of Ints:  " << num_intervals << std::endl;
-  std::cout << "Underlying:      " << S << std::endl;
-  std::cout << "Strike:          " << K << std::endl;
-  std::cout << "Risk-Free Rate:  " << r << std::endl;
-  std::cout << "Volatility:      " << v << std::endl;
-  std::cout << "Maturity:        " << T << std::endl;
+  // std::cout << "Number of Paths: " << num_sims << std::endl;
+  // std::cout << "Number of Ints:  " << num_intervals << std::endl;
+  // std::cout << "Underlying:      " << S << std::endl;
+  // std::cout << "Strike:          " << K << std::endl;
+  // std::cout << "Risk-Free Rate:  " << r << std::endl;
+  // std::cout << "Volatility:      " << v << std::endl;
+  // std::cout << "Maturity:        " << T << std::endl;
 
-  // std::cout << "Asian Price:     " << discount_payoff_avg << std::endl;
+  // // std::cout << "Asian Price:     " << discount_payoff_avg << std::endl;
   printf("Asian Price:     %.5f\n", discount_payoff_avg);
 
-  for(int i = 1; i < argc; i++)
-  {
-    std::cout << "argc[" << i << "]:         " << argv[i] << std::endl;
-  }
+  // for(int i = 1; i < argc; i++)
+  // {
+  //   std::cout << "argc[" << i << "]:         " << argv[i] << std::endl;
+  // }
 
 
   return 0;
