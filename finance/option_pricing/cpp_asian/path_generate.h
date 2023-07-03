@@ -16,8 +16,8 @@ double gaussian_box_muller() {
     x = 2.0 * rand() / static_cast<double>(RAND_MAX)-1;
     y = 2.0 * rand() / static_cast<double>(RAND_MAX)-1;
 
-    printf("x:     %.10f\n", x);
-    printf("y:     %.10f\n", y);
+    // printf("x:     %.10f\n", x);
+    // printf("y:     %.10f\n", y);
 
     euclid_sq = x*x + y*y;
   } while (euclid_sq >= 1.0);
@@ -39,7 +39,6 @@ void calc_path_spot_prices(std::vector<double>& spot_prices,  // Vector of spot 
 
   for (int i=1; i<spot_prices.size(); i++) {
     double gauss_bm = gaussian_box_muller();
-    printf("Test\n");
     spot_prices[i] = spot_prices[i-1] * drift * exp(vol*gauss_bm);
   }
 }

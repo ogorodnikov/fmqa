@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
   std::cout << "Maturity:        " << T << std::endl;
 
   // std::cout << "Asian Price:     " << discount_payoff_avg << std::endl;
-  printf("Asian Price:     %.10f\n", discount_payoff_avg);
+  printf("Asian Price:     %.5f\n", discount_payoff_avg);
 
   for(int i = 1; i < argc; i++)
   {
