@@ -1,0 +1,3 @@
+/generated_prices/*
+
+!generated_prices/.gitignore
