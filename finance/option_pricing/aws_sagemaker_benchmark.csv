@@ -1,0 +1,7 @@
+﻿Name,vCPU,RAM,Elapsed,Minutes,USD/Hour,"Total, USD",Cost Efficiency
+ml.t3.medium ,2, 4 GiB ,04:00:00,240,0.050,0.200,0.021
+ml.c5.large ,4," 8 GiB	",03:20:00,200,0.204,0.680,0.007
+local ,12, 16 GiB ,01:30:00,90,0.000,0.000,-
+ml.c5.4xlarge ,16, 32 GiB ,00:30:00,30,0.816,0.408,0.082
+ml.c5.18xlarge ,48, 96 GiB ,00:15:00,15,2.448,0.612,0.109
+ml.c5.24xlarge ,96, 192 GiB ,00:15:00,15,4.896,1.224,0.054
