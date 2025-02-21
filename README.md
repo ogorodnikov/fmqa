@@ -4,6 +4,8 @@ Factorization Machine Quantum Annealing (FMQA) algorithm for combinatorial optim
 
 ## Installation
 
+You can replace home directory ("~") with any directory of your choice)
+
 Create and activate Venv environment:
 
 ```bash
@@ -24,7 +26,18 @@ pip install --upgrade pip
 pip install ~/fmqa
 ```
 
-Please replace home directory ("~") with any directory of your choice)
+To run examples - please install Jupyter Lab and create "FMQA" kernel to use in notebooks:
+
+```bash
+pip install ipykernel pickleshare
+ipython kernel install --name="FMQA" --user
+jupyter kernelspec list
+```
+
+## Examples
+
+1 - [Portfolio Optimization](examples/01_portfolio_fmqa.ipynb) \
+2 - [Protein Synthesis](examples/01_proteins_fmqa.ipynb)
 
 ## Acknowledgments
 
