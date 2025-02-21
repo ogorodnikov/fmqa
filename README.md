@@ -2,11 +2,29 @@
 
 Factorization Machine Quantum Annealing (FMQA) algorithm for combinatorial optimization tasks.
 
-## Clone
+## Installation
+
+Create and activate Venv environment:
 
 ```bash
-https://gitlab.com/mohor/fmqa.git
+python3 -m venv ~/fmqa_venv
+source ~/fmqa_venv/bin/activate
 ```
+
+Clone FMQA repository:
+
+```bash
+git clone https://github.com/ogorodnikov/fmqa.git ~/fmqa
+```
+
+Install FMQA package:
+
+```bash
+pip install --upgrade pip
+pip install ~/fmqa
+```
+
+Please replace home directory ("~") with any directory of your choice)
 
 ## Acknowledgments
 
