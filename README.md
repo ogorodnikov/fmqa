@@ -37,7 +37,7 @@ jupyter kernelspec list
 ## Examples
 
 1 - [Portfolio Optimization](examples/01_portfolio_fmqa.ipynb) \
-2 - [Protein Synthesis](examples/01_proteins_fmqa.ipynb)
+2 - [Protein Synthesis](examples/02_proteins_fmqa.ipynb)
 
 ## Acknowledgments
 
