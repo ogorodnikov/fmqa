@@ -1,1 +1,6 @@
 .ipynb_checkpoints
+__pycache__
+build
+*.egg-info
+.coverage
+.DS_Store
