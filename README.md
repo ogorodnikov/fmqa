@@ -26,7 +26,14 @@ pip install --upgrade pip
 pip install ~/fmqa
 ```
 
-To run examples - please install Jupyter Lab and create "FMQA" kernel to use in notebooks:
+To run examples - please install and run Jupyter Lab:
+
+```bash
+pip install jupyterlab
+jupyter lab ~/fmqa
+```
+
+Or you could create a Jupyter kernel "FMQA" - to use it with existing Jupyter Lab:
 
 ```bash
 pip install ipykernel pickleshare
