@@ -10,7 +10,7 @@
     readme = "README.md"
     authors = [{ name = "Mykhailo Ohorodnikov", email = "mykhailo.ohorodnikov@gmail.com" }]
     license = { file = "LICENSE" }
-    version = "0.1.0"
+    version = "0.1.1"
     requires-python = ">= 3.10"
     dependencies = [
         "numpy >= 2.2.3",
